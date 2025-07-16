@@ -2,6 +2,7 @@
 
 ## Build
 only tested on linux, you need to have https://github.com/raysan5/raylib installed
+Likely will not work on windows without WSL, OSX could work
 ### option 1 temporary install
 ~~~ shell
 git clone https://github.com/Overionised/silly-particles
