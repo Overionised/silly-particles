@@ -1,29 +1,38 @@
+# Silly-particles
 
+implementing https://github.com/raylib-extras/raylib-quickstart and https://github.com/raysan5/raylib
+## Build Instructions
 
-## Build
-only tested on linux, you need to have https://github.com/raysan5/raylib installed
-Likely will not work on windows without WSL, OSX could work
-### option 1 temporary install
-~~~ shell
+### Linux
+
+~~~
 git clone https://github.com/Overionised/silly-particles
-cd silly-particles
-gcc main.c -o silly-particles -lraylib -lGL -lm -lpthread -ldl -lrt -lX11 
+cd silly-particles/build
+./premake5-compat gmake # you can also run  ./premake5 gmake   on newer systems
+cd ..
+make
+cd bin
 ~~~
+executable should be in bin, or in the debug folder
 
-### option 2 permanent install
-~~~ shell
+### macOS
+~~~
+git clone https://github.com/Overionised/silly-particles                  
+cd silly-particles/build                                                                    
+./premake5.osx gmake          
+cd ..   
+make
+cd bin
+~~~ 
+executable should be in bin, or in the debug folder
+
+### windows
+~~~
 git clone https://github.com/Overionised/silly-particles
-cd silly-particles
-gcc main.c -o silly-particles -lraylib -lGL -lm -lpthread -ldl -lrt -lX11
-sudo cp silly-particles /usr/bin/
+Double click the build-MinGW-W64.bat file
+cd silly-particles/
+make
 ~~~
-## Run
-### option 1 usage
-~~~ shell
-./silly-particles
-~~~
+executable should be in bin, or in the debug folder
 
-### option 2 usage
-~~~ shell
-silly-particles
-~~~
+
